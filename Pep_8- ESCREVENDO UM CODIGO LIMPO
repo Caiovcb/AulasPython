@@ -1,0 +1,13 @@
+Escrevendo um cogigo limpo
+ 
+# Nomes sensatos
+# Nunca use l, O, ou Inomes de uma única letra, pois podem ser confundidos com 1e 0, dependendo do tipo de letra:
+0 = 2  # Por que 0 seria igual a 2 ? não tem motivo. use o 2 diretamente ou explique a utilidade dele
+
+# Estilo de nomenclaturas
+
+Função	       Use uma palavra ou palavras minúsculas.             EX
+               Separe as palavras por sublinhados para 
+               melhorar a legibilidade.                      function,my_function
+               
+
