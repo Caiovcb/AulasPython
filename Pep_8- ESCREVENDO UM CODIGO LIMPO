@@ -1,13 +1,65 @@
 Escrevendo um cogigo limpo
  
 # Nomes sensatos
-# Nunca use l, O, ou Inomes de uma única letra, pois podem ser confundidos com 1e 0, dependendo do tipo de letra:
+# Nunca use l, O, ou I nomes de uma única letra, pois podem ser confundidos com 1 e 0, dependendo do tipo de letra:
 0 = 2  # Por que 0 seria igual a 2 ? não tem motivo. use o 2 diretamente ou explique a utilidade dele
 
 # Estilo de nomenclaturas
 
 Função	       Use uma palavra ou palavras minúsculas.             EX
                Separe as palavras por sublinhados para 
-               melhorar a legibilidade.                      function,my_function
-               
+               melhorar a legibilidade.                      funcao, minha_funcao
 
+Variável	   Use uma única letra minúscula, palavra              EX
+               ou palavras. Separe as palavras com
+               sublinhados para melhorar a legibilidade.	 x, var, minha_variavel
+
+Classe	       Comece cada palavra com uma letra                   EX
+               maiúscula. Não separe palavras com 
+               sublinhados. Este estilo é chamado de 
+               camel case ou pascal case .	                 Modelo, MinhaClasse
+
+Método	       Use uma palavra ou palavras minúsculas.             EX
+               Separe as palavras com sublinhados para
+               melhorar a legibilidade.	                     class_metodo, metodo
+
+Constante	   Use uma única letra maiúscula, palavra              EX
+               ou palavras. Separe as palavras com 
+               sublinhados para melhorar a legibilidade.     CONSTANTEMY_CONSTANT 
+                                                             MINHA_LONGA_CONSTANTE
+
+Módulo	       Use uma palavra ou palavras curtas e                EX
+               minúsculas. Separe as palavras com 
+               sublinhados para melhorar a legibilidade.	 module.py,my_module.py
+
+Pacote	       Use uma palavra ou palavras curtas e                EX
+               minúsculas. Não separe palavras com  
+               sublinhados.	                                 package,mypackage
+
+# Como escolher nomes
+
+Escolher nomes para suas variáveis, funções, classes e assim por diante pode ser um desafio. Você deve pensar bastante em suas escolhas de nomenclatura ao escrever o código, pois isso tornará seu código mais legível. A melhor maneira de nomear seus objetos em Python é usar nomes descritivos para deixar claro o que o objeto representa.
+
+Ao nomear variáveis, você pode ficar tentado a escolher nomes simples de letras minúsculas, como x. Mas, a menos que você esteja usando xcomo argumento de uma função matemática, não está claro o que xrepresenta. Imagine que você está armazenando o nome de uma pessoa como uma string e deseja usar o fatiamento de string para formatar seu nome de maneira diferente. Você pode acabar com algo assim:
+
+>>> # Not recommended 
+>>> x = 'John Smith'
+>>> y, z = x.split()
+>>> print(z, y, sep=', ')
+'Smith, John'
+
+>>> # Recommended
+>>> name = 'John Smith'
+>>> first_name, last_name = name.split()
+>>> print(last_name, first_name, sep=', ')
+'Smith, John'
+
+# Abreviando referencias
+
+# Not recommended
+def db(x):
+    return x * 2
+
+# Recommended
+def multiply_by_two(x):
+    return x * 2
