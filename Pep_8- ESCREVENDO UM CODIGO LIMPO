@@ -63,3 +63,145 @@ def db(x):
 # Recommended
 def multiply_by_two(x):
     return x * 2
+
+# Envolva funções e classes de nível superior com duas linhas em branco.
+EXEMPLO:
+
+class MyFirstClass:
+    pass
+
+
+class MySecondClass:
+    pass
+
+
+def top_level_function():
+    return None
+
+# Envolva as definições de método dentro das classes com uma única linha em branco.
+EXEMPLO:
+
+class MyClass:
+    def first_method(self):
+        return None
+
+    def second_method(self):
+        return None
+
+# Use linhas em branco com moderação dentro de funções para mostrar etapas claras. 
+EXEMPLO:
+
+def calculate_variance(number_list):
+    sum_list = 0
+    for number in number_list:
+        sum_list = sum_list + number
+    mean = sum_list / len(number_list)
+
+    sum_squares = 0
+    for number in number_list:
+        sum_squares = sum_squares + number**2
+    mean_squares = sum_squares / len(number_list)
+
+    return mean_squares - mean**2
+
+# Comprimento máximo de linha e quebra de linha
+O PEP 8 sugere que as linhas sejam limitadas a 79 caracteres. Isso ocorre porque permite que você tenha vários arquivos abertos um ao lado do outro, evitando também a quebra de linha.
+
+O Python assumirá a continuação de linha se o código estiver entre parênteses, colchetes ou chaves:
+
+def function(arg_one, arg_two,
+             arg_three, arg_four):
+    return arg_one
+
+    Se for impossível usar a continuação implícita, você pode usar barras invertidas para quebrar as linhas:
+
+    from mypkg import example1, \
+    example2, example3
+
+Abaixo está um exemplo de quebra antes de um operador binário:
+# Recomendado
+total = (first_variable
+         + second_variable
+         - third_variable)
+
+# Not Recommended
+total = (first_variable +
+         second_variable -
+         third_variable)
+
+# Recuo
+A indentação, ou espaço em branco principal, é extremamente importante em Python. O nível de recuo das linhas de código em Python determina como as instruções são agrupadas.
+
+Considere o seguinte exemplo:
+
+x = 3
+if x > 5:
+    print('x is larger than 5')
+
+    Use 4 espaços consecutivos para indicar o recuo.
+    Prefira espaços em vez de tabulações.
+
+# Tabs vs. Espaços
+Como mencionado acima, você deve usar espaços em vez de tabulações ao recuar o código. Você pode ajustar as configurações em seu editor de texto para produzir 4 espaços em vez de um caractere de tabulação, quando você pressiona a Tabtecla.
+
+Se você estiver usando o Python 2 e tiver usado uma mistura de tabulações e espaços para recuar seu código, não verá erros ao tentar executá-lo. Para ajudá-lo a verificar a consistência, você pode adicionar um -tsinalizador ao executar o código Python 2 a partir da linha de comando. O intérprete emitirá avisos quando você for inconsistente com o uso de tabulações e espaços:
+
+# Recuo após quebras de linha
+Quando você está usando continuações de linha para manter as linhas com menos de 79 caracteres, é útil usar recuo para melhorar a legibilidade. Ele permite ao leitor distinguir entre duas linhas de código e uma única linha de código que abrange duas linhas. Existem dois estilos de recuo que você pode usar.
+
+A primeira delas é alinhar o bloco recuado com o delimitador de abertura:
+
+def function(arg_one, arg_two,
+             arg_three, arg_four):
+    return arg_one
+
+x = 5
+if (x > 3 and
+    x < 10):
+    print(x)
+
+Adicione um comentário após a condição final. Devido ao realce de sintaxe na maioria dos editores, isso separará as condições do código aninhado:
+
+x = 5
+if (x > 3 and
+    x < 10):
+    # Both conditions satisfied
+    print(x)
+
+Adicione recuo extra na continuação da linha:
+
+x = 5
+if (x > 3 and
+        x < 10):
+    print(x)
+
+# Espaço em branco em torno de operadores binários
+Cerque os seguintes operadores binários com um único espaço de cada lado:
+
+Operadores de atribuição ( =, +=, -=e assim por diante)
+
+Comparações ( ==, !=, >, <. >=, <=) e ( is, is not, in, not in)
+
+Booleanos ( and, not, or)
+
+Nota : Quando = é usado para atribuir um valor padrão a um argumento de função, não o coloque entre espaços.
+
+# Recommended
+def function(default_parameter=5):
+    # ...
+
+
+# Not recommended
+def function(default_parameter = 5):
+    # ...
+
+# Para alinhar operadores de atribuição:
+# Recommended
+var1 = 5
+var2 = 6
+some_long_var = 7
+
+# Not recommended
+var1          = 5
+var2          = 6
+some_long_var = 7
