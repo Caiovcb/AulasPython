@@ -34,4 +34,4 @@ for c in range (1, 5):
     Email_novo,
     Plano_novo
 )
-    print('cliente{}º'.format(c), cliente.nome)
+    print('cliente{}º'.format(c), cliente.Email)
