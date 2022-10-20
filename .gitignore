@@ -1,1 +1,6 @@
 myvenv2
+bin
+lib/python3.10/site-packages
+lib64
+include
+pyvenv.cfg
